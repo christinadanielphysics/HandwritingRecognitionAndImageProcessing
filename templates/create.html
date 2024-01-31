@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>the filename for the document goes here</title>
+        <link rel="stylesheet" href="../static/create.css">
+        <link href="../static/favicon.ico" type="image/x-icon" rel="icon" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://kit.fontawesome.com/1c24049b35.js" crossorigin="anonymous"></script>
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['$','$'], ['\\(','\\)']]
+                },
+                svg: {
+                    fontCache: 'global'
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    </head>
+    <body>
+        <header>
+            <h2 class="logo">scribble2symbol</h2>
+            <button class="settings" id="create-settings">Settings</button> 
+            <button class="back" id="create-back">Back</button> 
+            <button class="sign-out" id="create-sign-out">Sign Out</button> 
+        </header>
+        
+        <div class="vertical-arrangement">
+
+            <!-- <button type="button" class="train-btn" id="button-train">Train</button> -->
+
+            <h1 class="h1-section">Symbolize</h1>
+
+            <div class="part">
+
+                <div class="top-bar">
+                    <div class="buttons-above-canvas"> 
+                        <div class="left-side">
+                            <button type="button" class="find-btn" id="find-btn"><i class='bx bx-search-alt-2'></i> Find</button>
+                            <div class="space-for-symbolic-buttons" id="above-canvas"></div>
+                        </div>
+                        <div class="right-side">
+                            <button type="button" id="mathjax-clear-btn" class="btn-clear-mathjax"><i class="fa-solid fa-broom"></i> Clear</button>
+                            <button type="button" id="mathjax-add-btn" class="btn-add-to-doc"><i class="fa-solid fa-plus"></i> Add to Document</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="horizontal-arrangement">
+                    <canvas width=200px height=200px class="drawing-canvas" id="canvas-draw"></canvas>
+                    <div class="vertical-buttons">
+                        <button type="button" class="vertical-btn" id="clear-canvas-btn"><i class='bx bxs-tag-x'></i></button>
+                    </div>
+                    <p class="mathjax" id="display-mathjax"></p>
+                    <div class="vertical-buttons">
+                        <button type="button" class="vertical-btn" id="undo-btn"><i class='bx bxs-tag-x'></i></button>
+                    </div>              
+                </div>
+                
+            </div>
+
+
+            <h1 class="h1-section">Write</h1>
+
+            <div class="part">
+
+                <div class="top-bar">
+                    
+                    <div class = "buttons-above-text-area">
+                        <!-- <button type="button" id="keyboard-options-btn" class="btn">More Options</button> -->
+                        <button type="button" id="keyboard-add-btn" class="btn-add-to-doc"><i class="fa-solid fa-plus"></i> Add to Document</button>
+                    </div>
+
+                </div>
+
+
+                <div class="horizontal-arrangement">
+                    <textarea placeholder="" class="text-area" id="text-area-for-typing"></textarea>
+                </div>
+            </div>
+
+
+            <h1 class="h1-section">Review</h1>
+            <div class="part">
+                <div class="button-container">
+                    <button type="button" class="output-button" id="output-undo"><i class="fa-solid fa-rotate-left"></i> Undo</button>
+                    <button type="button" class="output-button" id="output-redo"><i class="fa-solid fa-rotate-right"></i> Redo</button>
+                </div>
+                <iframe src="./path_to_pdf" frameborder="0" class="scrollable-pdf" id="pdf-viewer"></iframe>
+            </div>
+
+
+            <!-- <h1 class="h1-section">Sponsored</h1> -->
+        
+
+        </div>
+
+
+
+
+
+          <!-- Pop-up for the Find Feature  -->
+          <div class="modal" id="modal">
+            <div class="modal-header">
+                <div class="modal-title"><i class='bx bx-search-alt-2'></i> Find</div>
+                <button type="button" class="modal-close-button" id="close-button"><i class='bx bx-x-circle'></i></button>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+
+
+        <script src="../static/load.js" type="module"></script>
+        <script src="../static/write.js" type="module"></script>
+        <script src="../static/create.js" type="module"></script>
+        <script src="../static/mathjax.js" type="module"></script>
+        <script src="../static/refresh.js" type="module"></script>
+        <script src="../static/review.js" type="module"></script>
+        <script src="../static/find.js" type="module"></script>
+        <script src="../static/javascript_dictionary.js" type="module"></script>
+
+
+    </body>
+
+    <footer>
+        <label class="left">scribble2symbol © 2024 </label>
+        <label class="right">contact@scribble2symbol.com</label>
+    </footer>
+
+</html>

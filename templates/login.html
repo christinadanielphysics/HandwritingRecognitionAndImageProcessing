@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="../static/login.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="../static/favicon.ico" type="image/x-icon" rel="icon" />
+    </head>
+
+    <body>
+
+        <header>
+            <h2 class="logo">scribble2symbol</h2>
+        </header>
+
+        <div class="include-footer-in-login-page">
+
+        <div class="wrapper">
+
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope' ></i></span>
+                        <input type="email" id="email-login" required>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" id="password-login" required>
+                        <label>Password</label>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <!-- <label><input type="checkbox"> Remember me</label> -->
+                        <a id="forgot-password-link" href="#">Forgot Password?</a>
+                    </div>
+
+                    <button type="button" class="btn-login" id="login-button">Login</button>
+
+                    <div class="login-section">
+                        <p>Don't have an account? <a href="#" class = "register-link">Create Account</a></p>
+                    </div>
+
+                </form>
+            </div> 
+      
+            <div class="form-box register">
+                <h2>Create Account</h2>
+                <form action="#">
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope' ></i></span>
+                        <input type="email" id="email-register" required>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" id="password-register" required>
+                        <label>Password</label>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <!-- <label><input type="checkbox"> I agree to the terms & conditions </label> -->
+                    </div>
+
+                    <button type="button" class="btn-register" id="register-button">Create Account</button>
+
+                    <div class="register-section">
+                        <p>Already have an account? <a href="#" class = "login-link">Login</a></p>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+        <footer class="put-footer-below-login">
+            <label class="left">scribble2symbol © 2024 </label>
+            <label class="right">contact@scribble2symbol.com</label>
+        </footer>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+    </body>
+
+
+
+    <script type="module" src="../static/initialize.js"></script>
+    <script type="module" src="../static/login.js"></script>
+    <script type="module" src="../static/table.js"></script>
+
+
+</html>
